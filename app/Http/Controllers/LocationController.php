@@ -1,38 +1,50 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
-use App\Location;
+use DB;
 
-class LocationController extends Controller{
 
-   public function index(){
-      return view('test');
-   }
+class LocationController extends Controller
+{
+    /**
+     * Show the application layout.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function layout()
+    {
+    	return view('test');
+    }
 
-   /*
-   AJAX request
-   */
-   public function getLocations(Request $request){
 
-      $search = $request->search;
+    /**
+     * Show the application dataAjax.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function dataAjax(Request $request)
+    {
+        $data = [];
+        $search = $request->search;
 
-      if($search == ''){
-         $location = Location::orderby('border','dsc')->select('id','border')->limit(5)->get();
-      }else{
-         $location = Location::orderby('border','dsc')->select('id','border')->where('border', 'like', '%' .$search . '%')->limit(5)->get();
-      }
+        if($request->has('q')){ //If user types show similar data to what he is typing
+            $search = $request->q;
+            $data = DB::table("locations")
+            		->select("id","border")
+            		->where('border','LIKE',"%$search%")
+            		->get();
+        }else{ //If user will not type anything show first 5 from DB
+            $data = DB::table("locations")
+            ->select("id","border")
+            ->limit(5)
+            ->get();
+        }
 
-      $response = array();
-      foreach($locations as $location){
-         $response[] = array(
-              "id"=>$location->id,
-              "text"=>$location->border
-         );
-      }
 
-      echo json_encode($response);
-      exit;
-   }
+        return response()->json($data);
+    }
 }

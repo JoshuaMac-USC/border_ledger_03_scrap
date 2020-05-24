@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2020 at 08:39 PM
+-- Generation Time: May 24, 2020 at 05:02 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -51,7 +51,8 @@ CREATE TABLE `borders` (
 
 INSERT INTO `borders` (`id`, `created_at`, `updated_at`, `fname`, `lname`, `age`, `id_number`, `id_type`, `mode_of_transpo`, `vplatenum`, `purpose`, `destination`, `border_name`, `path`) VALUES
 (1, '2020-05-23 08:20:28', '2020-05-23 08:20:28', 'John', 'Doe', 20, 'AXEGAV775', 'Driver\'s License', 'Walking', NULL, 'Grocery', 'SM Supermarket', 'Labangon', 'Ingoing'),
-(2, '2020-05-23 09:27:07', '2020-05-23 09:27:07', 'Adam', 'Levine', 22, 'AVBA2315', 'Driver\'s License', 'Walking', NULL, 'Salvation', 'Heaven', 'Guadalupe', 'Outgoing');
+(2, '2020-05-23 09:27:07', '2020-05-23 09:27:07', 'Adam', 'Levine', 22, 'AVBA2315', 'Driver\'s License', 'Walking', NULL, 'Salvation', 'Heaven', 'Guadalupe', 'Outgoing'),
+(3, '2020-05-24 06:52:03', '2020-05-24 06:52:03', 'Francis', 'Doe', 34, 'AVBA2315', 'Driver\'s License', 'Walking', NULL, 'Fresh Air', 'SM Supermarket', '2', 'Ingoing');
 
 -- --------------------------------------------------------
 
@@ -80,6 +81,14 @@ CREATE TABLE `locations` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `border` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `locations`
+--
+
+INSERT INTO `locations` (`id`, `created_at`, `updated_at`, `border`) VALUES
+(1, NULL, NULL, 'Labangon'),
+(2, NULL, NULL, 'Talamban');
 
 -- --------------------------------------------------------
 
@@ -192,7 +201,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `borders`
 --
 ALTER TABLE `borders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -204,7 +213,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `locations`
 --
 ALTER TABLE `locations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `migrations`

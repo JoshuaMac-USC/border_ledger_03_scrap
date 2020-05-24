@@ -73,12 +73,9 @@
     <input type="text" id="destination" name="destination">   
     <br>
 
-                  <label for="border_name">Border Name:</label>
+    <label for="border_name">Border Name:</label>
                   <select style="width:150px" name="border_name" id="border_name">
-                <option value=""></option>
-                <option value="Talamban">Talamban</option>
-                <option value="Labangon">Labangon</option>
-                <option value="Guadalupe">Guadalupe</option>
+                <option value=''>--Select Border--</option>
                   </select>
     <br>
 
@@ -164,11 +161,8 @@
     <br>
 
     <label for="border_name">Border Name:</label>
-                  <select style="width:150px" name="border_name" id="border_nameout">
-                <option value=""></option>
-                <option value="Talamban">Talamban</option>
-                <option value="Labangon">Labangon</option>
-                <option value="Guadalupe">Guadalupe</option>
+                  <select style="width:150px" name="border_name" id="border_name">
+                <option value=''>--Select Border--</option>
                   </select>
     <br>
 
@@ -284,16 +278,48 @@
       </table>
       {{ $ledgers->links() }}
 
-      <script>
-$(document).ready(function(){
-    $('#border_name').select2({
-        placeholder: 'Select a Location'
-    });
+
+<script type="text/javascript">
+$('#border_name').select2({
+  placeholder: 'Select border',
+  ajax: {
+    url: '/ledger-ajax',
+    dataType: 'json',
+    delay: 250,
+    processResults: function (data) {
+      return {
+        results:  $.map(data, function (item) {
+              return {
+                  text: item.border,
+                  id: item.id
+              }
+          })
+      };
+    },
+    cache: true
+  }
 })
-$(document).ready(function(){
-    $('#border_nameout').select2({
-        placeholder: 'Select a Location'
-    });
+
+$('#border_nameout').select2({
+  placeholder: 'Select border',
+  ajax: {
+    url: '/ledger-ajax',
+    dataType: 'json',
+    delay: 250,
+    processResults: function (data) {
+      return {
+        results:  $.map(data, function (item) {
+              return {
+                  text: item.border,
+                  id: item.id
+              }
+          })
+      };
+    },
+    cache: true
+  }
 })
-      </script>
+
+
+</script>
 @endsection

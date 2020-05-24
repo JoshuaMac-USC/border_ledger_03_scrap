@@ -15,30 +15,28 @@
    <input name="path" type="hidden" value="Ingoing">
     <input type="submit" value="Add Record">
     </form>
-      <script>
-          // CSRF Token
-    var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-$(document).ready(function(){
-    $('#border_name').select2({
-        ajax: { 
-          url: "{{route('locations.getLocations')}}",
-          type: "post",
-          dataType: 'json',
-          delay: 250,
-          data: function (params) {
-            return {
-              _token: CSRF_TOKEN,
-              search: params.term // search term
-            };
-          },
-          processResults: function (response) {
-            return {
-              results: response
-            };
-          },
-          cache: true
-        }
-    });
+    
+    <script type="text/javascript">
+$('#border_name').select2({
+  placeholder: 'Select border',
+  ajax: {
+    url: '/ledger-ajax',
+    dataType: 'json',
+    delay: 250,
+    processResults: function (data) {
+      return {
+        results:  $.map(data, function (item) {
+              return {
+                  text: item.border,
+                  id: item.id
+              }
+          })
+      };
+    },
+    cache: true
+  }
 });
-      </script>
+
+
+</script>
 @endsection

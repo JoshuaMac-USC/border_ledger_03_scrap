@@ -17,12 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/ledgers','LedgerController@index')->middleware('auth');
+Route::get('ledger-ajax', 'LocationController@dataAjax');
 Route::post('/ledgers','LedgerController@store')->middleware('auth');
 Route::get('/usermanage','UserController@index')->middleware('auth');
 Route::get('/profilesetting','UserController@edit')->name('user.edit');
 Route::post('/profilesetting','UserController@update')->name('user.update');
-Route::get('/test','LocationController@index');
-Route::post('/locations/getLocations/','LocationController@getLocations')->name('locations.getLocations');
+/*
+Route::get('/ledgers', 'LocationController@layout');
+Route::get('ledger-ajax', 'LocationController@dataAjax');
+*/
 Route::delete('/users/{id}', 'UserController@destroy');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
