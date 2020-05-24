@@ -5823,3 +5823,93 @@ Did you mean one of these?
 #52 C:\\xampp\\htdocs\\laravel\\WebDev-BorderLedger\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #53 {main}
 "} 
+[2020-05-24 12:46:12] local.ERROR: There are no commands defined in the "routes" namespace.
+
+Did you mean this?
+    route {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"routes\" namespace.
+
+Did you mean this?
+    route at C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\symfony\\console\\Application.php:574)
+[stacktrace]
+#0 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\symfony\\console\\Application.php(625): Symfony\\Component\\Console\\Application->findNamespace('routes')
+#1 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\symfony\\console\\Application.php(228): Symfony\\Component\\Console\\Application->find('routes:list')
+#2 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\symfony\\console\\Application.php(140): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2020-05-24 12:49:01] local.ERROR: Trying to get property 'is_admin' of non-object {"exception":"[object] (ErrorException(code: 0): Trying to get property 'is_admin' of non-object at C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\outes\\web.php:25)
+[stacktrace]
+#0 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\outes\\web.php(25): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Trying to get p...', 'C:\\\\Users\\\\Dell\\\\D...', 25, Array)
+#1 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php(35): require('C:\\\\Users\\\\Dell\\\\D...')
+#2 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(417): Illuminate\\Routing\\RouteFileRegistrar->register('C:\\\\Users\\\\Dell\\\\D...')
+#3 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(374): Illuminate\\Routing\\Router->loadRoutes('C:\\\\Users\\\\Dell\\\\D...')
+#4 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(134): Illuminate\\Routing\\Router->group(Array, 'C:\\\\Users\\\\Dell\\\\D...')
+#5 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\app\\Providers\\RouteServiceProvider.php(63): Illuminate\\Routing\\RouteRegistrar->group('C:\\\\Users\\\\Dell\\\\D...')
+#6 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\app\\Providers\\RouteServiceProvider.php(47): App\\Providers\\RouteServiceProvider->mapWebRoutes()
+#7 [internal function]: App\\Providers\\RouteServiceProvider->map()
+#8 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(33): call_user_func_array(Array, Array)
+#9 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(91): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#11 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#12 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(592): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#13 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(87): Illuminate\\Container\\Container->call(Array)
+#14 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(36): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->loadRoutes()
+#15 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\app\\Providers\\RouteServiceProvider.php(35): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->boot()
+#16 [internal function]: App\\Providers\\RouteServiceProvider->boot()
+#17 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(33): call_user_func_array(Array, Array)
+#18 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(91): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#20 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(592): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(867): Illuminate\\Container\\Container->call(Array)
+#23 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(850): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\RouteServiceProvider))
+#24 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\RouteServiceProvider), 23)
+#25 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(851): array_walk(Array, Object(Closure))
+#26 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#27 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#28 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#29 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(135): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#30 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(109): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\server.php(21): require_once('C:\\\\Users\\\\Dell\\\\D...')
+#33 {main}
+"} 
+[2020-05-24 12:51:00] local.ERROR: Trying to get property 'is_admin' of non-object {"exception":"[object] (ErrorException(code: 0): Trying to get property 'is_admin' of non-object at C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\outes\\web.php:26)
+[stacktrace]
+#0 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\outes\\web.php(26): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Trying to get p...', 'C:\\\\Users\\\\Dell\\\\D...', 26, Array)
+#1 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php(35): require('C:\\\\Users\\\\Dell\\\\D...')
+#2 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(417): Illuminate\\Routing\\RouteFileRegistrar->register('C:\\\\Users\\\\Dell\\\\D...')
+#3 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(374): Illuminate\\Routing\\Router->loadRoutes('C:\\\\Users\\\\Dell\\\\D...')
+#4 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(134): Illuminate\\Routing\\Router->group(Array, 'C:\\\\Users\\\\Dell\\\\D...')
+#5 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\app\\Providers\\RouteServiceProvider.php(63): Illuminate\\Routing\\RouteRegistrar->group('C:\\\\Users\\\\Dell\\\\D...')
+#6 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\app\\Providers\\RouteServiceProvider.php(47): App\\Providers\\RouteServiceProvider->mapWebRoutes()
+#7 [internal function]: App\\Providers\\RouteServiceProvider->map()
+#8 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(33): call_user_func_array(Array, Array)
+#9 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(91): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#11 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#12 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(592): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#13 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(87): Illuminate\\Container\\Container->call(Array)
+#14 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(36): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->loadRoutes()
+#15 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\app\\Providers\\RouteServiceProvider.php(35): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->boot()
+#16 [internal function]: App\\Providers\\RouteServiceProvider->boot()
+#17 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(33): call_user_func_array(Array, Array)
+#18 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(91): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#20 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#21 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(592): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#22 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(867): Illuminate\\Container\\Container->call(Array)
+#23 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(850): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\RouteServiceProvider))
+#24 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\RouteServiceProvider), 23)
+#25 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(851): array_walk(Array, Object(Closure))
+#26 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#27 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#28 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#29 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(135): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#30 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(109): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\Dell\\Desktop\\Border Patrol\\WebDev-BorderLedger\\server.php(21): require_once('C:\\\\Users\\\\Dell\\\\D...')
+#33 {main}
+"} 
