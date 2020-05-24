@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use DB;
+use App\Location;
 
 
 class LocationController extends Controller
@@ -28,23 +28,23 @@ class LocationController extends Controller
      */
     public function dataAjax(Request $request)
     {
-        $data = [];
         $search = $request->search;
 
-        if($request->has('q')){ //If user types show similar data to what he is typing
-            $search = $request->q;
-            $data = DB::table("locations")
-            		->select("id","border")
-            		->where('border','LIKE',"%$search%")
-            		->get();
-        }else{ //If user will not type anything show first 5 from DB
-            $data = DB::table("locations")
-            ->select("id","border")
-            ->limit(5)
-            ->get();
+        if($search == ''){
+           $locations = Location::orderby('border','asc')->select('id','border')->limit(5)->get();
+        }else{
+           $locations = Location::orderby('border','asc')->select('id','border')->where('border', 'like', '%' .$search . '%')->limit(5)->get();
         }
-
-
-        return response()->json($data);
+  
+        $response = array();
+        foreach($locations as $location){
+           $response[] = array(
+                "id"=>$location->border,
+                "text"=>$location->border
+           );
+        }
+  
+        echo json_encode($response);
+        exit;
     }
 }

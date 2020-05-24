@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/ledgers','LedgerController@index')->middleware('auth');
-Route::get('ledger-ajax', 'LocationController@dataAjax');
+Route::post('/locations/dataAjax/', 'LocationController@dataAjax')->name('locations.dataAjax');
 Route::post('/ledgers','LedgerController@store')->middleware('auth');
 Route::get('/usermanage','UserController@index')->middleware('auth');
 Route::get('/profilesetting','UserController@edit')->name('user.edit');
