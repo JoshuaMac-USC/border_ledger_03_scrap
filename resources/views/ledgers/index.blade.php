@@ -160,8 +160,8 @@
     <input type="text" id="destination" name="destination">   
     <br>
 
-    <label for="border_name">Border Name:</label>
-                  <select style="width:150px" name="border_name" id="border_name">
+    <label for="border_nameout">Border Name:</label>
+                  <select style="width:150px" name="border_name" id="border_nameout">
                 <option value=''>--Select Border--</option>
                   </select>
     <br>
@@ -298,7 +298,7 @@ $('#border_name').select2({
     },
     cache: true
   }
-})
+}),
 
 $('#border_nameout').select2({
   placeholder: 'Select border',
@@ -318,7 +318,7 @@ $('#border_nameout').select2({
     },
     cache: true
   }
-})
+});
 
 
 </script>
