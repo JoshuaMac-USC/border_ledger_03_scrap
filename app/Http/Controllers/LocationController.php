@@ -28,23 +28,23 @@ class LocationController extends Controller
      */
     public function dataAjax(Request $request)
     {
-        $search = $request->search;
+      $search = $request->search;
 
-        if($search == ''){
-           $locations = Location::orderby('border','asc')->select('id','border')->limit(5)->get();
-        }else{
-           $locations = Location::orderby('border','asc')->select('id','border')->where('border', 'like', '%' .$search . '%')->limit(5)->get();
-        }
-  
-        $response = array();
-        foreach($locations as $location){
-           $response[] = array(
-                "id"=>$location->id,
-                "text"=>$location->border
-           );
-        }
-  
-        echo json_encode($response);
-        exit;
+      if($search == ''){
+         $locations = Location::orderby('border','asc')->select('id','border')->limit(5)->get();
+      }else{
+         $locations = Location::orderby('border','asc')->select('id','border')->where('border', 'like', '%' .$search . '%')->limit(5)->get();
+      }
+
+      $response = array();
+      foreach($locations as $location){
+         $response[] = array(
+              "id"=>$location->border,
+              "text"=>$location->border
+         );
+      }
+
+      echo json_encode($response);
+      exit;
     }
 }

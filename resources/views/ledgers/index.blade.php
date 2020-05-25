@@ -4,13 +4,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- INGOING TRIGGER -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ingoing">
   Ingoing
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="ingoing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="ingoing"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -74,9 +75,9 @@
     <br>
 
     <label for="border_name">Border Name:</label>
-      <select style="width:150px" name="border_name" id="border_name">
-            <option value=''>--Select Border--</option>
-      </select>
+                  <select style="width:150px" name="border_name" id="border_name">
+                <option value=''></option>
+                  </select>
     <br>
 
    <input name="path" type="hidden" value="Ingoing">
@@ -99,7 +100,7 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="outgoing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="outgoing" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -162,7 +163,7 @@
 
     <label for="border_nameout">Border Name:</label>
                   <select style="width:150px" name="border_name" id="border_nameout">
-                <option value=''>--Select Border--</option>
+                <option value=''></option>
                   </select>
     <br>
 
@@ -310,7 +311,7 @@ $('#border_nameout').select2({
     url: "{{route('locations.dataAjax')}}",
     type: "post",
           dataType: 'json',
-          delay: 250,
+          delay: 150,
           data: function (params) {
             return {
               _token: CSRF_TOKEN,
