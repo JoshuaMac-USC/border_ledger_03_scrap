@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<title>User Management</title>
 
 @if(Auth::User()->is_admin==1)
 <!-- BUTTON TRIGGER -->

@@ -19,7 +19,7 @@ class HomeController extends Controller
     public function admin(Request $req){
         return view('home');
         }
-
+    
     /**
      * Show the application dashboard.
      *

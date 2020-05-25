@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+<title>Profile Setting</title>
 <table class="table">
          <thead>
          <tr>

@@ -10,7 +10,7 @@ class UserController extends Controller
     public function index(){
         $person = User::paginate(20);
         return view('usermanage',['users' => $person]);
-    }
+}
     public function destroy($id){
         $user = User::findOrFail($id);
         $user->delete();
@@ -41,7 +41,7 @@ class UserController extends Controller
                     'lname' => ['required', 'string', 'max:255'],
                     'email' => ['required', 'string', 'email', 'max:255'],
                     'password' => ['required', 'string', 'min:8', 'confirmed'],
-                    'dob' => ['required'],
+                    'dob' => ['required', ],
                 ]);
     
             } else {
@@ -58,7 +58,8 @@ class UserController extends Controller
             $user->fname =$request['fname'];
             $user->lname =$request['lname'];
             $user->email =$request['email'];
-            $user->fname =$request['fname'];
+            $user->dob =$request['dob'];
+            $user->password = bcrypt($request->get('password'));
 
             $user->save();
 
