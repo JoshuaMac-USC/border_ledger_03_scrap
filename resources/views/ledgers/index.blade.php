@@ -227,6 +227,8 @@
                <td>{{ $ledger->mode_of_transpo }}</td>
                @if(is_null($ledger->vplatenum))
                <td>N/A</td>
+                @else
+                
                @endif
                <td>{{ $ledger->purpose }}</td>
                <td>{{ $ledger->destination }}</td>
@@ -267,8 +269,7 @@
                <td>{{ $ledger->id_number }}</td>
                @if(is_null($ledger->vplatenum))
                <td>N/A</td>
-               @endif
-               @if(!is_null($ledger->vplatenum))
+               @else
                <td>{{ $ledger->vplatenum }}</td>
                @endif
                <td>{{ $ledger->border_name }}</td>
