@@ -18,6 +18,8 @@ class CreateLocationsTable extends Migration
             $table->timestamps();
             $table->string('border');
         });
+        $seeder = new LocationsTableSeeder();
+        $seeder->run();
     }
 
     /**

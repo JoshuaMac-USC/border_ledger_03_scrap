@@ -25,17 +25,8 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-
-        DB::table('users')->insert(
-            array(
-                'email' => 'admin@gmail.com',
-                'fname' => 'Joshua',
-                'lname' => 'Macaldo',
-                'password' => 'admin123',
-                'dob' => '07/15/1999',
-                'is_admin' => 1
-            )
-        );
+        $seeder = new UsersTableSeeder();
+        $seeder->run();
     }
 
     /**

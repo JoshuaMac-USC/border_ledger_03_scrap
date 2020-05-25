@@ -39,7 +39,7 @@ class LocationController extends Controller
         $response = array();
         foreach($locations as $location){
            $response[] = array(
-                "id"=>$location->border,
+                "id"=>$location->id,
                 "text"=>$location->border
            );
         }
