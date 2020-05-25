@@ -74,9 +74,9 @@
     <br>
 
     <label for="border_name">Border Name:</label>
-                  <select style="width:150px" name="border_name" id="border_name">
-                <option value=''>--Select Border--</option>
-                  </select>
+      <select style="width:150px" name="border_name" id="border_name">
+            <option value=''>--Select Border--</option>
+      </select>
     <br>
 
    <input name="path" type="hidden" value="Ingoing">
