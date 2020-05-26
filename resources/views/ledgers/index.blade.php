@@ -129,6 +129,7 @@
 
     <label for="id_type">ID Type:</label>
     <select name="id_type" id="id_type" required>
+    <option value=""></option>
     <option value="Driver's License">Driver's License</option>
     <option value="School ID">School ID</option>
     <option value="Government ID">Government ID</option>
@@ -142,6 +143,7 @@
 
     <label for="mode_of_transpo">Mode of Transportation:</label>
     <select name="mode_of_transpo" id="mode_of_transpo" required>
+    <option value=""></option>
     <option value="Walking">Walking</option>
     <option value="PUV">PUV</option>
     <option value="Private Vehicle">Private Vehicle</option>
