@@ -29,17 +29,17 @@
     <form action="/ledgers" method="POST">
     @csrf
     <label for="fname">First Name:</label>
-    <input type="text" id="fname" name="fname">
+    <input type="text" id="fname" name="fname" required>
     <br>
     <label for="lname">Last Name:</label>
-    <input type="text" id="lname" name="lname">
+    <input type="text" id="lname" name="lname" required>
     <br>
     <label for="age">Age:</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" required>
     <br>
 
     <label for="id_type">ID Type:</label>
-    <select name="id_type" id="id_type">
+    <select name="id_type" id="id_type" required>
     <option value=""></option>
     <option value="Driver's License">Driver's License</option>
     <option value="School ID">School ID</option>
@@ -49,11 +49,11 @@
     <br>
 
     <label for="id_number">ID Number:</label>
-    <input type="text" id="id_number" name="id_number">    
+    <input type="text" id="id_number" name="id_number" required>    
     <br>
 
     <label for="mode_of_transpo">Mode of Transportation:</label>
-    <select name="mode_of_transpo" id="mode_of_transpo">
+    <select name="mode_of_transpo" id="mode_of_transpo" required>
     <option value=""></option>
     <option value="Walking">Walking</option>
     <option value="PUV">PUV</option>
@@ -67,15 +67,15 @@
     <br>
 
     <label for="purpose">Purpose:</label>
-    <input type="text" id="purpose" name="purpose">   
+    <input type="text" id="purpose" name="purpose" required>   
     <br>
 
     <label for="destination">Destination:</label>
-    <input type="text" id="destination" name="destination">   
+    <input type="text" id="destination" name="destination" required>   
     <br>
 
     <label for="border_name">Border Name:</label>
-                  <select style="width:150px" name="border_name" id="border_name">
+                  <select style="width:150px" name="border_name" id="border_name" required> 
                 <option value=''></option>
                   </select>
     <br>
@@ -118,17 +118,17 @@
     <form action="/ledgers" method="POST">
     @csrf
     <label for="fname">First Name:</label>
-    <input type="text" id="fname" name="fname">
+    <input type="text" id="fname" name="fname" required>
     <br>
     <label for="lname">Last Name:</label>
-    <input type="text" id="lname" name="lname">
+    <input type="text" id="lname" name="lname" required>
     <br>
     <label for="age">Age:</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" required>
     <br>
 
     <label for="id_type">ID Type:</label>
-    <select name="id_type" id="id_type">
+    <select name="id_type" id="id_type" required>
     <option value="Driver's License">Driver's License</option>
     <option value="School ID">School ID</option>
     <option value="Government ID">Government ID</option>
@@ -137,11 +137,11 @@
     <br>
 
     <label for="id_number">ID Number:</label>
-    <input type="text" id="id_number" name="id_number">    
+    <input type="text" id="id_number" name="id_number" required>    
     <br>
 
     <label for="mode_of_transpo">Mode of Transportation:</label>
-    <select name="mode_of_transpo" id="mode_of_transpo">
+    <select name="mode_of_transpo" id="mode_of_transpo" required>
     <option value="Walking">Walking</option>
     <option value="PUV">PUV</option>
     <option value="Private Vehicle">Private Vehicle</option>
@@ -154,15 +154,15 @@
     <br>
 
     <label for="purpose">Purpose:</label>
-    <input type="text" id="purpose" name="purpose">   
+    <input type="text" id="purpose" name="purpose" required>   
     <br>
 
     <label for="destination">Destination:</label>
-    <input type="text" id="destination" name="destination">   
+    <input type="text" id="destination" name="destination" required>   
     <br>
 
     <label for="border_nameout">Border Name:</label>
-                  <select style="width:150px" name="border_name" id="border_nameout">
+                  <select style="width:150px" name="border_name" id="border_nameout" required>
                 <option value=''></option>
                   </select>
     <br>

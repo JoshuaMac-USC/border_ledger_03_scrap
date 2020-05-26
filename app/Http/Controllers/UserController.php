@@ -40,7 +40,7 @@ class UserController extends Controller
                     'fname' => ['required', 'string', 'max:255'],
                     'lname' => ['required', 'string', 'max:255'],
                     'email' => ['required', 'string', 'email', 'max:255'],
-                    'password' => ['required', 'string'],
+                    'password' => ['required', 'string', 'min:8'],
                     'dob' => ['required', ],
                 ]);
     
@@ -49,7 +49,7 @@ class UserController extends Controller
                     'fname' => ['required', 'string', 'max:255'],
                     'lname' => ['required', 'string', 'max:255'],
                     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-                    'password' => ['required', 'string'],
+                    'password' => ['required', 'string','min:8'],
                     'dob' => ['required'],
                 ]);
     
@@ -63,7 +63,8 @@ class UserController extends Controller
 
             $user->save();
 
-            return redirect('/profilesetting');
+
+            return redirect($this->redirectPath())->with('message','your message');
          }else {
             return redirect()->back();
         }
