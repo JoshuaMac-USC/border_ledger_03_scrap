@@ -11,21 +11,37 @@ class LedgerController extends Controller
         return view('ledgers.index',['ledgers' => $person]);
     }
 
-    public function store(){
+    public function store(Request $request){
 
-        $person = new Border();
+        $this->validate ($request, [
+            'fname' => ['required', 'string', 'max:255'],
+            'lname' => ['required', 'string', 'max:255'],
+            'age' => ['required', 'int'],
+            'id_number' => ['required', 'string', 'max:255'],
+            'id_type' => ['required', 'string', 'max:255'],
+            'mode_of_transpo' => ['required'],
+            'vplatenum' => ['required', 'string', 'max:255'],
+            'purpose' => 'required',
+            'destination' => ['required', 'string', 'max:255'],
+            'border_name' => 'required',
+            'path' => 'required'
+        ]);
 
-        $person->fname = request('fname');
-        $person->lname = request('lname');
-        $person->age = request('age');
-        $person->id_number = request('id_number');
-        $person->id_type = request('id_type');
-        $person->mode_of_transpo = request('mode_of_transpo');
-        $person->vplatenum = request('vplatenum');
-        $person->purpose = request('purpose');
-        $person->destination = request('destination');
-        $person->border_name = request('border_name');
-        $person->path = request('path');
+        $person = new Border([
+            $person->fname => $request->get('fname'),
+            $person->lname => $request->get('lname'),
+            $person->age => $request->get('age'),
+            $person->id_number => $request->get('id_number'),    
+            $person->id_type => $request->get('id_type'),
+            $person->mode_of_transpo => $request->get('mode_of_transpo'),
+            $person->vplatenum => $request->get('vplatenum'),
+            $person->purpose => $request->get('purpose'),
+            $person->destination => $request->get('destination'),
+            $person->border_name => $request->get('border_name'),
+            $person->path => $request->get('path')
+        ]);
+
+      
         
         $person->save();
 

@@ -25,7 +25,7 @@
 <!-- BUTTON TRIGGER -->
 <center>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#EditUser">
-  Edit User
+  Edit Profile
 </button>
 </center>
 <!-- Modal -->
@@ -33,7 +33,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit User</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -52,12 +52,6 @@
 
                             <div class="col-md-6">
                                 <input id="fname" type="text" class="form-control @error('fname') is-invalid @enderror" name="fname" value="{{ $user['fname'] }}" required autocomplete="fname" autofocus>
-
-                                @error('fname')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -66,12 +60,6 @@
 
                             <div class="col-md-6">
                                 <input id="lname" type="text" class="form-control @error('lname') is-invalid @enderror" name="lname" value="{{ $user['lname'] }}" required autocomplete="lname" autofocus>
-
-                                @error('lname')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -80,12 +68,6 @@
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user['email'] }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -94,20 +76,6 @@
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" value="********" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation"  value="********" required autocomplete="new-password">
                             </div>
                         </div>
 
@@ -116,12 +84,6 @@
 
                             <div class="col-md-6">
                                 <input id="dob" type="date" class="form-control @error('dob') is-invalid @enderror" name="dob" value="{{ $user['dob'] }}" required autocomplete="dob" autofocus>
-
-                                @error('dob')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -129,7 +91,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Update User') }}
+                                    {{ __('Update Profile') }}
                                 </button>
                             </div>
                         </div>

@@ -9,7 +9,7 @@ body {
 }
 
 .full-height {
-  height: 100vh;
+  height: 90vh;
 }
 
 .flex-center {
@@ -34,16 +34,18 @@ body {
 
 .title {
   font-size: 65px;
+  color: black;
 }
 
 .links > a {
   color: #636b6f;
-  padding: 0 25px;
+  padding: 25px 25px;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1rem;
   text-decoration: none;
   text-transform: uppercase;
+  float: right;
 }
 
 .m-b-md {
