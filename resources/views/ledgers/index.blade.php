@@ -217,14 +217,14 @@
                @endif
                <td>{{ $ledger->border_name }}</td>
                <td>{{ $ledger->path }}</td>
-               <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewinfo">
+               <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewinfo-{{ $ledger->id }}">
                 View
               </button><!--Information View Modal -->
-    <div class="modal fade" id="viewinfo" tabindex="-1" role="dialog" aria-labelledby="viewinfo" aria-hidden="true">
+    <div class="modal fade" id="viewinfo-{{ $ledger->id }}" tabindex="-1" role="dialog" aria-labelledby="viewinfo-{{ $ledger->id }} aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="viewinfo">Ledger History</h5>
+            <h5 class="modal-title" id="viewinfo-{{ $ledger->id }}">Ledger Information</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
         </button>
@@ -249,6 +249,7 @@
          </thead>
          <tbody>
             <tr>
+            
                <td>{{ $ledger->created_at }}</td>
                <td>{{ $ledger->fname }} {{ $ledger->lname }}</td>
                <td>{{ $ledger->age }}</td>
@@ -279,7 +280,7 @@
 </div>
 </td>
 </tr>
-            @endforeach
+@endforeach
          </tbody>
       </table>
       {{ $ledgers->links() }}
