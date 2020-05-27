@@ -331,6 +331,18 @@ legend {
   white-space: normal;
 }
 
+.links > a {
+  color: #636b6f;
+  padding-left: 40px;
+  padding-top: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+}
+
 progress {
   vertical-align: baseline;
 }

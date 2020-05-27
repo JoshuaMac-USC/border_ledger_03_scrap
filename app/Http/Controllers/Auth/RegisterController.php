@@ -45,7 +45,7 @@ class RegisterController extends Controller
                 if($request->user()->is_admin == 1){
                     return $next($request);
                 }else{
-                    return redirect('/home');
+                    return redirect('/ledgers');
                 }
 
             });
