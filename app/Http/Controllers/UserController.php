@@ -64,7 +64,7 @@ class UserController extends Controller
             $user->save();
 
 
-            return redirect($this->redirectPath())->with('message','your message');
+            return redirect('/profilesetting')->with('message','your message');
          }else {
             return redirect()->back();
         }

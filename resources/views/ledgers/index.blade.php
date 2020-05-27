@@ -8,11 +8,11 @@
 <!-- INGOING TRIGGER -->
 <div class="px-2">
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ingoing">
-  Ingoing
+  Going In
 </button>
 <!-- Modal -->
 <div class="modal fade" id="ingoing"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Going In</h5>
@@ -28,65 +28,67 @@
 
     <form action="/ledgers" method="POST">
     @csrf
+    <div class="form-group">
     <label for="fname">First Name:</label>
-    <input type="text" id="fname" name="fname" required>
+    <input type="text" class="form-control" id="fname" name="fname" required>
+    </div>
     <br>
+    <div class="form-group">
     <label for="lname">Last Name:</label>
-    <input type="text" id="lname" name="lname" required>
+    <input type="text" class="form-control" id="lname" name="lname" required>
+    </div>
     <br>
+    <div class="form-group">
     <label for="age">Age:</label>
-    <input type="text" id="age" name="age" required>
+    <input type="text" class="form-control" id="age" name="age" required>
+    </div>
     <br>
-
+    <div class="form-group">
     <label for="id_type">ID Type:</label>
-    <select name="id_type" id="id_type" required>
-    <option value=""></option>
-    <option value="Driver's License">Driver's License</option>
-    <option value="School ID">School ID</option>
-    <option value="Government ID">Government ID</option>
-    <option value="Company ID">Company ID</option>
-    </select>
+    <input type="text" class="form-control" id="id_type" name="id_type" required>
+    </div>
     <br>
-
+    <div class="form-group">
     <label for="id_number">ID Number:</label>
-    <input type="text" id="id_number" name="id_number" required>    
+    <input type="text" class="form-control" id="id_number" name="id_number" required>    
+    </div>
     <br>
-
+    <div class="form-group">
     <label for="mode_of_transpo">Mode of Transportation:</label>
-    <select name="mode_of_transpo" id="mode_of_transpo" required>
-    <option value=""></option>
-    <option value="Walking">Walking</option>
-    <option value="PUV">PUV</option>
-    <option value="Private Vehicle">Private Vehicle</option>
-    <option value="Company Vehicle">Company Vehicle</option>
-    </select>
+    <input type="text" class="form-control" id="mode_of_transpo" name="mode_of_transpo" required>
+    </div>
     <br>
-
+    <div class="form-group">
     <label for="vplatenum">Plate Number:</label>
-    <input type="text" id="vplatenum" name="vplatenum">   
+    <input type="text" class="form-control" id="vplatenum" name="vplatenum">  
+    </div> 
     <br>
-
+    <div class="form-group">
     <label for="purpose">Purpose:</label>
-    <input type="text" id="purpose" name="purpose" required>   
+    <textarea id="purpose" class="form-control" name="purpose" rows="2" cols="30" required>
+    </textarea>    
+    </div>
     <br>
-
+    <div class="form-group">
     <label for="destination">Destination:</label>
-    <input type="text" id="destination" name="destination" required>   
+    <textarea id="destination" class="form-control" name="destination" rows="2" cols="30" required>
+    </textarea>  
+    </div>
     <br>
-
+    <div class="form-group">
     <label for="border_name">Border Name:</label>
-                  <select style="width:150px" name="border_name" id="border_name" required> 
+                  <select style="width:150px" name="border_name" id="border_name" class="form-control" required> 
                 <option value=''></option>
                   </select>
+    </div>
     <br>
 
-   <input name="path" type="hidden" value="Ingoing">
-    <input type="submit" value="Add Record">
-    </form>
+   <input name="path" type="hidden" value="Going In">
 </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <input type="submit" class="btn btn-secondary" value="Add Record">
+    </form>
       </div>
     </div>
   </div>
@@ -96,7 +98,7 @@
 
 <!-- OUTGOING TRIGGER -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#outgoing">
-  Outgoing
+  Going Out
 </button>
 
 <!-- Modal -->
@@ -117,65 +119,68 @@
 
     <form action="/ledgers" method="POST">
     @csrf
+    <div class="form-group">
     <label for="fname">First Name:</label>
-    <input type="text" id="fname" name="fname" required>
+    <input type="text" class="form-control" id="fname" name="fname" required>
+    </div>
     <br>
+    <div class="form-group">
     <label for="lname">Last Name:</label>
-    <input type="text" id="lname" name="lname" required>
+    <input type="text" class="form-control" id="lname" name="lname" required>
+    </div>
     <br>
+    <div class="form-group">
     <label for="age">Age:</label>
-    <input type="text" id="age" name="age" required>
+    <input type="text" class="form-control" id="age" name="age" required>
+    </div>
     <br>
-
+    <div class="form-group">
     <label for="id_type">ID Type:</label>
-    <select name="id_type" id="id_type" required>
-    <option value=""></option>
-    <option value="Driver's License">Driver's License</option>
-    <option value="School ID">School ID</option>
-    <option value="Government ID">Government ID</option>
-    <option value="Company ID">Company ID</option>
-    </select>
+    <input type="text" class="form-control" id="id_type" name="id_type" required>
+    </div>
     <br>
-
+    <div class="form-group">
     <label for="id_number">ID Number:</label>
-    <input type="text" id="id_number" name="id_number" required>    
+    <input type="text" class="form-control" id="id_number" name="id_number" required>    
+    </div>
     <br>
-
+    <div class="form-group">
     <label for="mode_of_transpo">Mode of Transportation:</label>
-    <select name="mode_of_transpo" id="mode_of_transpo" required>
-    <option value=""></option>
-    <option value="Walking">Walking</option>
-    <option value="PUV">PUV</option>
-    <option value="Private Vehicle">Private Vehicle</option>
-    <option value="Company Vehicle">Company Vehicle</option>
-    </select>
+    <input type="text" class="form-control" id="mode_of_transpo" name="mode_of_transpo" required>
+    </div>
     <br>
-
+    <div class="form-group">
     <label for="vplatenum">Plate Number:</label>
-    <input type="text" id="vplatenum" name="vplatenum">   
+    <input type="text" class="form-control" id="vplatenum" name="vplatenum">  
+    </div> 
     <br>
-
+    <div class="form-group">
     <label for="purpose">Purpose:</label>
-    <input type="text" id="purpose" name="purpose" required>   
+    <textarea id="purpose" class="form-control" name="purpose" rows="2" cols="30" required>
+    </textarea>    
+    </div>
     <br>
-
+    <div class="form-group">
     <label for="destination">Destination:</label>
-    <input type="text" id="destination" name="destination" required>   
+    <textarea id="destination" class="form-control" name="destination" rows="2" cols="30" required>
+    </textarea>  
+    </div>
     <br>
-
-    <label for="border_nameout">Border Name:</label>
-                  <select style="width:150px" name="border_name" id="border_nameout" required>
+    <div class="form-group">
+    <label for="border_name">Border Name:</label>
+                  <select style="width:150px" name="border_name" id="border_nameout" class="form-control" required> 
                 <option value=''></option>
                   </select>
+    </div>
     <br>
 
-   <input name="path" type="hidden" value="Outgoing">
-    <input type="submit" value="Add Record">
-    </form>
+   <input name="path" type="hidden" value="Going Out">
+
 </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <input type="submit" class="btn btn-secondary" value="Add Record">
+    </form>
       </div>
     </div>
   </div>
@@ -183,21 +188,45 @@
 </div>
 </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  View Ledgers
-</button>
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ledger History</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+<br>
+<table class="table table-striped">
+         <thead>
+         <tr>
+            <th>Date Created</th>
+            <th>Name</th>
+            <th>ID Type</th>
+            <th>ID Number</th>
+            <th>Plate Number</th>
+            <th>Border Name</th>
+            <th>Going In/Going Out</th>
+            <th>View Information</th>
+         </tr>
+         </thead>
+         <tbody>
+            @foreach($ledgers as $ledger)
+            <tr>
+               <td>{{ $ledger->created_at }}</td>
+               <td>{{ $ledger->fname }} {{ $ledger->lname }}</td>
+               <td>{{ $ledger->id_type }}</td>
+               <td>{{ $ledger->id_number }}</td>
+               @if(is_null($ledger->vplatenum))
+               <td>N/A</td>
+               @endif
+               @if(!is_null($ledger->vplatenum))
+               <td>{{ $ledger->vplatenum }}</td>
+               @endif
+               <td>{{ $ledger->border_name }}</td>
+               <td>{{ $ledger->path }}</td>
+               <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewinfo">
+                View
+              </button><!--Information View Modal -->
+    <div class="modal fade" id="viewinfo" tabindex="-1" role="dialog" aria-labelledby="viewinfo" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="viewinfo">Ledger History</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
@@ -215,11 +244,10 @@
             <th>Purpose</th>
             <th>Destination</th>
             <th>Border Name</th>
-            <th>Ingoing/Outgoing</th>
+            <th>Going In/Going Out</th>
          </tr>
          </thead>
          <tbody>
-            @foreach($ledgers as $ledger)
             <tr>
                <td>{{ $ledger->created_at }}</td>
                <td>{{ $ledger->fname }} {{ $ledger->lname }}</td>
@@ -238,10 +266,8 @@
                <td>{{ $ledger->border_name }}</td>
                <td>{{ $ledger->path }}</td>
             </tr>
-            @endforeach
          </tbody>
       </table>
-      {{ $ledgers->links() }}
    </div>
       </div>
       <div class="modal-footer">
@@ -249,37 +275,10 @@
       </div>
     </div>
   </div>
+  </div>
 </div>
-</div>
-<br>
-<table class="table table-striped">
-         <thead>
-         <tr>
-            <th>Date Created</th>
-            <th>Name</th>
-            <th>ID Type</th>
-            <th>ID Number</th>
-            <th>Plate Number</th>
-            <th>Border Name</th>
-            <th>Ingoing/Outgoing</th>
-         </tr>
-         </thead>
-         <tbody>
-            @foreach($ledgers as $ledger)
-            <tr>
-               <td>{{ $ledger->created_at }}</td>
-               <td>{{ $ledger->fname }} {{ $ledger->lname }}</td>
-               <td>{{ $ledger->id_type }}</td>
-               <td>{{ $ledger->id_number }}</td>
-               @if(is_null($ledger->vplatenum))
-               <td>N/A</td>
-               @endif
-               @if(!is_null($ledger->vplatenum))
-               <td>{{ $ledger->vplatenum }}</td>
-               @endif
-               <td>{{ $ledger->border_name }}</td>
-               <td>{{ $ledger->path }}</td>
-            </tr>
+</td>
+</tr>
             @endforeach
          </tbody>
       </table>
